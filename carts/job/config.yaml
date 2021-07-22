@@ -13,4 +13,5 @@ actions:
         cmd:
           - kubectl
         args:
+          - "--server=http://kubernetes"
           - 'version'
