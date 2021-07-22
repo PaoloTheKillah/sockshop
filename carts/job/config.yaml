@@ -13,5 +13,4 @@ actions:
         cmd:
           - kubectl
         args:
-          - "--server=https://kubernetes.default.svc"
-          - 'version'
+          - 'cluster-info'
