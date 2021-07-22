@@ -3,26 +3,10 @@ actions:
   - name: Run kubectl
     events:
       - name: sh.keptn.event.deployment.triggered
-      # - name: "sh.keptn.event.test.triggered"
-        # jsonpath:
-          # property: "$.data.test.teststrategy"
-          # match: "health"
-      # - name: "sh.keptn.event.test.triggered"
-        # jsonpath:
-          # property: "$.data.test.teststrategy"
-          # match: "load"
     tasks:
       - name: Deploy arbitrary k8s manifests
-        files:
-          - locust/basic.py
-          - locust/import.py
-          - locust/locust.conf
         image: "bitnami/kubectl"
         cmd:
           - kubectl
         args:
           - '--version'
-        env:
-          - name: HOST
-            value: "$.data.deployment.deploymentURIsLocal[0]"
-            valueFrom: event
