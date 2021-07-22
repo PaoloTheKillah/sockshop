@@ -9,4 +9,4 @@ actions:
         cmd:
           - kubectl
         args:
-          - '--version'
+          - 'version'
