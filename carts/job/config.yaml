@@ -13,5 +13,5 @@ actions:
         cmd:
           - kubectl
         args:
-          - "--server=kubernetes.default.svc"
+          - "--server=https://kubernetes.default.svc"
           - 'version'
