@@ -4,6 +4,10 @@ actions:
     events:
       - name: sh.keptn.event.deployment.triggered
     tasks:
+      - name: Dump environment
+        image: busybox
+        cmd:
+          - env
       - name: Deploy arbitrary k8s manifests
         image: "bitnami/kubectl"
         cmd:
